@@ -141,7 +141,7 @@ const Footer = () => {
 const Order = ({ openHour, closeHour, isOpen, todayOrTomorrow }) => {
 	return (
 		<>
-			<p style={{ color: isOpen ? 'black' : 'red' }}>
+			<p style={{ color: isOpen ? '#252525' : 'red' }}>
 				{isOpen
 					? `We're open until ${closeHour}:00. Come visit us or order online!`
 					: `Sorry we're closed until ${daysOfWeek[todayOrTomorrow]} ${openHour}:00.`}
