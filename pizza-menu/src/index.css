@@ -15,7 +15,7 @@ body {
   color: #252525;
   font-weight: 400;
   background-color: #f7f2e9;
-  border-bottom: 1.6rem solid #edc84b;
+  border-bottom: 1.6rem solid #d45625;
   min-height: 100vh;
   padding: 3.2rem;
   padding-bottom: 6rem;
@@ -38,10 +38,7 @@ body {
 }
 
 .header h1 {
-  /* Non-accessible color */
-  color: #edc84b;
-  /* color: #af8602; */
-
+  color: #d45625;
   text-transform: uppercase;
   text-align: center;
   font-size: 5.2rem;
@@ -58,7 +55,7 @@ body {
   content: '';
   height: 3px;
   width: 12rem;
-  background-color: #edc84b;
+  background-color: #ed6b4b;
   position: absolute;
   top: calc(50% - 1px);
 }
@@ -168,14 +165,14 @@ body {
   border: none;
   font-size: 1.4rem;
   font-weight: 500;
-  background-color: #edc84b;
+  background-color: #ed6b4b;
   padding: 1.4rem 3.2rem;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .btn:hover {
-  background-color: #e9bb24;
+  background-color: #d45625;
 }
 
 /*
