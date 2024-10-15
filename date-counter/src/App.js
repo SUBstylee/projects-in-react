@@ -12,6 +12,11 @@ function App() {
 	// 	stepMove ? setStep((s) => s + 1) : setStep((s) => s - 1);
 	const adjustCount = (countMove) =>
 		countMove ? setCount((c) => c + step) : setCount((c) => c - step);
+	const handleReset = () => {
+		setStep(1);
+		setCount(0);
+	};
+
 	return (
 		<div className='App'>
 			<div className='row'>
@@ -38,6 +43,11 @@ function App() {
 				{count === 0 ? 'Today is' : ''} {count > 0 && 'from today will be'}
 				{count < 0 && 'before today was'} {date.toDateString()}
 			</p>
+			{(step !== 1 || count !== 0) && (
+				<div>
+					<button onClick={handleReset}>Reset</button>
+				</div>
+			)}
 		</div>
 	);
 	// ORIGINAL VERSION
