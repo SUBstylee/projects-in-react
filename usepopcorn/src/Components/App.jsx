@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useMovies } from '../hooks/useMovies';
 import { useLocalStorageState } from '../hooks/useLocalStorageState';
+import { useKey } from '../hooks/useKey';
 import NavBar from './NavBar';
 import Main from './Main';
 import Search from './Search';
@@ -150,15 +151,9 @@ const MovieDetails = ({ selectedId, onCloseMovie, onAddWatched, watched }) => {
 			document.title = 'usePopcorn';
 		};
 	}, [title]);
-	useEffect(() => {
-		const callback = (e) => {
-			if (e.code === 'Escape') {
-				onCloseMovie();
-			}
-		};
-		document.addEventListener('keydown', callback);
-		return () => document.removeEventListener('keydown', callback);
-	}, [onCloseMovie]);
+
+	useKey('Escape', onCloseMovie);
+
 	return (
 		<div className='details'>
 			{isLoading ? (
