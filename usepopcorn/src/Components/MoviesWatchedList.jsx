@@ -6,7 +6,7 @@ const MoviesWatchedList = ({ watched, onDeleteWatched }) => {
 			{watched.map((movie) => (
 				<MovieWatched
 					movie={movie}
-					key={movie.imdbId}
+					key={movie.imdbID}
 					onDeleteWatched={onDeleteWatched}
 				/>
 			))}
