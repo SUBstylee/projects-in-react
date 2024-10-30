@@ -4,7 +4,7 @@ const NextButton = ({ dispatch, answer }) => {
 		<button
 			className='btn btn-ui'
 			onClick={() => dispatch({ type: 'nextQuestion' })}>
-			NextButton
+			Next Question
 		</button>
 	);
 };
